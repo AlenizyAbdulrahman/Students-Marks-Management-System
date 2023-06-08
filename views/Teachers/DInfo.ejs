@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Teacher/styles.css">
+    <title>Personal Information</title>
+</head>
+<body>
+    
+    <div class="card">
+    
+        <form action="/teacher/personal" method="post">
+          <!-- <h2>STUDENT INFORMATION</h2> -->
+          <div class="title">
+            <h1> Doctor Information</h1>
+            
+        </div>
+
+          
+          <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" value="<%= teacherData.teacherId %>"  readonly>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<%= teacherData.Email %>"  readonly>
+          </div>
+          <div class="form-group">
+            <label for="name">Doctor Name:</label>
+            <input type="text" id="name" name="teacherName" value="<%= teacherData.teacherName %>"  >
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="mobile" value="<%= teacherData.mobileNumber %>">
+          </div>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+</body>
+</html>

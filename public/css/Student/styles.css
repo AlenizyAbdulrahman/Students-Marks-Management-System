@@ -1,0 +1,87 @@
+body {
+  background: linear-gradient(90deg, #c7c5f4, #4070f4);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 40px auto;
+  max-width: 400px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+form {
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+}
+.log-out img{
+  width: 20px;
+  height: 20px;
+}
+
+.log-out{
+  display: flex;
+  justify-content: right;
+  padding-top: 2rem;
+  padding-right: 2rem;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+.title {
+  color: black;
+  display: flex;
+  justify-content: center;
+  animation: slide-in 1s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>All Courses</title>
+
+    <link rel="stylesheet" href="/css/Teacher/listCorsD.css" />
+  </head>
+
+  <body>
+    <% if (error) { %>
+      <script >alert("<%= error %>");</script>
+  
+    <% } %>
+    <div class="filter"></div>
+
+    <table>
+        <caption><h1 class="title">What do you want to Teach?</h1></caption>
+      <tr>
+        
+        <th>Course Name</th>
+        <th>Course ID</th>
+        
+        <th>Hours</th>
+        <th>Doctor</th>
+
+        
+
+        <th></th>
+
+      </tr>
+
+
+      <% coursesData.forEach(element => { %>
+        <tr>
+          <td><%= element.courseName %></td>
+        <td><%= element.courseId %></td>
+        <td><%= element.HOURS %></td>
+        <td><%= element.DOCTOR %></td>
+        <form action="/teacher/addCourse/<%= element.courseId %>/<%= element.courseName %>/<%= element.HOURS %>" method="post">
+        <td><button class="btn" >ADD</button></td>
+      </tr>
+      </form>
+        
+        
+        
+        <% }); %>
+
+
+    </table>
+  </body>
+</html>

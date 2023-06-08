@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Semester Courses for Doctor</title>
+
+    <link rel="stylesheet" href="/css/teacher/corsDoc.css" />
+  </head>
+
+  <body>
+
+    <div class="filter"></div>
+
+    <table>
+        <caption><h1 class="title">Courses you have to Teach in this Semester:</h1></caption>
+      <tr>
+        <th>Course Name</th>
+
+        <th>Course ID</th>
+
+        <th>Hours</th>
+
+        
+
+        <th></th>
+        <th></th>
+
+        
+      </tr>
+      <% teacherData.courses.forEach(element => { %>
+      <tr>
+
+        <td><%=element.courseName%></td>
+          <td><%=element.courseID%></td>
+          <td><%=element.hour%></td>
+
+
+        <td><button rel="stylesheet"  class="btn" style="background-color: green;"><a href="/teacher/courses/show/<%= element.courseID %>">View</a></button> </td>
+        <!-- <td><a rel="stylesheet" href="/student/courses/show/ class="btn" style="background-color: green;">View</a></td> -->
+        <td><button rel="stylesheet" style="background-color: brown;"  class="btn" onclick="deleteEvent('<%= element.courseID %>')" id="deleteBtn" data-id="<%= element.courseID %>">Delete</button></td>
+
+      <tr>
+
+        <% }); %>
+        <td colspan="5"><a class="btnADD" href="/teacher/addCourse">ADD</a></td>
+      </tr>
+      
+    </table>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function deleteEvent(e) {
+  
+      
+      axios.delete('/teacher/courses/'+ e)
+      .then( (res)=> {
+          console.log(res.data)
+          alert('Course was deleted Successfully!')
+          window.location.href = '/teacher/courses'
+      })
+  
+      .catch( (err)=> {
+  
+          console.log(err)
+      })
+  
+  }
+    </script>
+  </body>
+</html>

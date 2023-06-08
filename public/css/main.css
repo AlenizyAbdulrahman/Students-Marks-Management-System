@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(90deg, #C7C5F4, #4070f4);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxes{
+    margin-top: 200px;
+    padding: 40px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(234, 231, 231, 0.395);
+    border-radius: 10px;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.588);
+}
+
+.boxes img{
+    width: 250px;
+    height: 250px;
+}
+
+
+.student :hover{
+    color: black;
+    background-color:#C7C5F4;
+}
+.student{
+    position: relative;
+    margin: 15px;
+}
+
+.teacher{
+    position: relative;
+    margin: 15px;
+}
+.teacher  :hover{
+    color: black;
+    background-color:#C7C5F4;
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px #4070f4;
+}
+
+.title{
+    margin-top: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    animation: slide-in 1s ease-out;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/student/styles.css"  type="text/css">
+    <title>Course Information</title>
+</head>
+<body>
+
+    <div class="card">
+    
+        <% students.courses.forEach(course => { %>
+          <!-- <h2>STUDENT INFORMATION</h2> -->
+          <div class="title">
+            <h1> Course Information</h1>
+            </div>
+          
+          <div class="form-group">
+            <label for="id">Quiz1:</label>
+            <input type="text" id="id"   readonly value="<%= course.Quiz1 %>">
+          </div>
+          <div class="form-group">
+            <label for="id">Quiz1:</label>
+            <input type="text" id="id"   readonly value="<%= course.Quiz2 %>">
+          </div>
+          <div class="form-group">
+            <label for="id">Mid-Term 1:</label>
+            <input type="text" id="id"   readonly value="<%= course.midTerm1 %>">
+          </div>
+          <div class="form-group">
+            <label for="id">Mid-Term 2:</label>
+            <input type="text" id="id"   readonly value="<%= course.midTerm2 %>">
+          </div>
+          <div class="form-group">
+            <label for="id">Project:</label>
+            <input type="text" id="id"   readonly value="<%= course.project %>">
+          </div>
+          <div class="form-group">
+            <label for="id">Final:</label>
+            <input type="text" id="id"   readonly value="<%= course.final %>">
+          </div>
+          <div class="form-group">
+            <label for="id">Total:</label>
+            <input type="text" id="id"   readonly value="<%= course.total %>">
+          </div>
+
+
+        <% }) %>
+      </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Teacher/styles.css">
+    <title>Edit Mark</title>
+</head>
+<body>
+    
+    <div class="card">
+    
+        <% students.courses.forEach(course => { %>
+        <form action="/teacher/courses/show/addMark/<%= students._id %>/<%= courseId %>" method="post">
+          <!-- <h2>STUDENT INFORMATION</h2> -->
+          <div class="title">
+            <h1> Edit Mark</h1>
+            
+        </div>
+
+          
+          <div class="form-group">
+            <label for="id">Student Name:</label>
+            <input type="text" id="id" name="studentName" value="<%= students.studentName %>"  readonly>
+          </div>
+          <div class="form-group">
+            <label for="email">Student Id:</label>
+            <input type="text" id="text" name="studentId" value="<%= students.studentId %>" readonly>
+          </div>
+          <div class="form-group">
+            <label for="name">Quiz 1:</label>
+            <input type="text" id="name" name="Quiz1" value="<%= course.Quiz1 %>"  >
+          </div>
+          <div class="form-group">
+            <label for="phone">Quiz 2:</label>
+            <input type="text" id="phone" name="Quiz2" value="<%= course.Quiz2 %>">
+          </div>
+          <div class="form-group">
+            <label for="phone">Mid-Term 1:</label>
+            <input type="text" id="phone" name="midTerm1" value="<%= course.midTerm1 %>">
+          </div>
+          <div class="form-group">
+            <label for="phone">Mid-Term 2:</label>
+            <input type="text" id="phone" name="midTerm2" value="<%= course.midTerm2 %>">
+          </div>
+          <div class="form-group">
+            <label for="phone">Project:</label>
+            <input type="text" id="phone" name="project" value="<%= course.project %>">
+          </div>
+          <div class="form-group">
+            <label for="phone">Final:</label>
+            <input type="text" id="phone" name="final" value="<%= course.final %>">
+          </div>
+          <input type="submit" value="Submit">
+        </form>
+        <% }) %>
+
+      </div>
+</body>
+</html>

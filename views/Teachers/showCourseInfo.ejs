@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Course Information</title>
+
+    <link rel="stylesheet" href="/css/Teacher/listCorsD.css" />
+  </head>
+
+  <body>
+    <div class="filter"></div>
+
+    <table>
+        <caption><h1 class="title">Course Informations</h1></caption>
+      <tr>
+        
+        <th>Student Name</th>
+        <th>Student ID</th>
+        <th>Quiz1</th>
+        <th>Quiz2</th>
+        <th>Mid-Term 1</th>
+        <th>Mid-Term 2</th>
+        <th>Project</th>
+        <th>Final</th>
+        <th>Total</th>
+        <th></th>
+
+      </tr>
+
+
+      <% students.forEach(element => { %>
+        <% element.courses.forEach(course => { %>
+    
+        <tr>
+        
+            <td><%= element.studentName %></td>
+            <td><%= element.studentId %></td>
+            <td><%= course.Quiz1 %></td>
+            <td><%= course.Quiz2 %></td>
+            <td><%= course.midTerm1 %></td>
+            <td><%= course.midTerm2 %></td>
+            <td><%= course.project %></td>
+            <td><%= course.final %></td>
+            <td><%= course.total %></td>
+
+
+            <td><button rel="stylesheet"  class="btn" style="background-color: green;"><a style="color: white;text-decoration: none" href="/teacher/courses/show/addMark/<%= element._id %>/<%= courseId %>">Edit Mark</a></button> </td>
+
+          
+        </tr>
+        <% })%>
+        <% })%>
+
+
+    </table>
+  </body>
+</html>

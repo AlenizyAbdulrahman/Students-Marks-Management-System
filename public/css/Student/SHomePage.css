@@ -1,0 +1,127 @@
+body {
+    background: linear-gradient(90deg, #C7C5F4, #4070f4);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxes{
+    margin-top: 45px;
+    padding: 20px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(234, 231, 231, 0.395);
+    border-radius: 10px;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.588);
+}
+
+.boxes img{
+    width: 250px;
+    height: 250px;
+}
+
+
+
+
+/* Doctors */
+
+.Info-D :hover{
+    color: black;
+    background-color:#C7C5F4;
+}
+.Info-D{
+    position: relative;
+    margin: 15px;
+}
+
+.Cource-D{
+    position: relative;
+    margin: 15px;
+}
+.Cource-D  :hover{
+    color: black;
+    background-color:#C7C5F4;
+    
+}
+
+
+/* Student */
+
+.Info-S :hover{
+    color: black;
+    background-color:#C7C5F4;
+}
+.Info-S{
+    position: relative;
+    margin: 15px;
+}
+
+.Cource-S{
+    position: relative;
+    margin: 15px;
+}
+.Cource-S  :hover{
+    color: black;
+    background-color:#C7C5F4;
+}
+
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px #4070f4;
+}
+.log-out img{
+    width: 20px;
+    height: 20px;
+}
+
+.log-out{
+    display: flex;
+    justify-content: right;
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+
+.title{
+    color: white;
+    display: flex;
+    justify-content: center;
+    animation: slide-in 1s ease-out;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+.boxes img{
+    animation: slide-out 1s ease-out;
+}
+
+@keyframes slide-out {
+    0% {
+        transform: perspective(400px) scaleX(1);
+    }
+
+    100% {
+        transform: perspective(400px) scaleX(-1);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: perspective(400px) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(400px) rotateY(180deg);
+    }
+}
